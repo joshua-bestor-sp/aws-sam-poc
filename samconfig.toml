@@ -1,0 +1,13 @@
+version = 0.1
+[dev]
+[dev.deploy]
+[dev.deploy.parameters]
+stack_name = "sam-app"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-1r5pkijwwyucp"
+s3_prefix = "sam-app"
+region = "us-east-1"
+profile = "dev"
+capabilities = "CAPABILITY_IAM"
+image_repositories = ["HelloWorldFunction=406205545357.dkr.ecr.us-east-1.amazonaws.com/sam-poc/hello-world-function-repo", "GoodbyeWorldFunction=406205545357.dkr.ecr.us-east-1.amazonaws.com/sam-poc/goodbye-world-function-repo", "OrgQueryFunction=406205545357.dkr.ecr.us-east-1.amazonaws.com/sam-poc/org-query-function-repo"]
+confirm_changeset = true
+parameter_overrides = "AwsSamPoc=\"arn:aws:iam::406205545357:role/AwsSamPoc\""
