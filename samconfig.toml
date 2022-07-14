@@ -1,13 +1,12 @@
 version = 0.1
-[dev]
-[dev.deploy]
-[dev.deploy.parameters]
-stack_name = "aws-sam-poc"
-s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-1r5pkijwwyucp"
-s3_prefix = "aws-sam-poc"
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "bestor-sam-test"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-47kbu1pcfqna"
+s3_prefix = "bestor-sam-test"
 region = "us-east-1"
 profile = "dev"
-capabilities = "CAPABILITY_IAM"
-image_repositories = ["HelloWorldFunction=406205545357.dkr.ecr.us-east-1.amazonaws.com/aws-sam-poc/hello-world-function-repo", "GoodbyeWorldFunction=406205545357.dkr.ecr.us-east-1.amazonaws.com/aws-sam-poc/goodbye-world-function-repo", "OrgQueryFunction=406205545357.dkr.ecr.us-east-1.amazonaws.com/aws-sam-poc/org-query-function-repo"]
 confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
 parameter_overrides = "AwsSamPoc=\"arn:aws:iam::406205545357:role/AwsSamPoc\""

@@ -16,10 +16,11 @@ Parameters:
     Description: "Arn of the AwsSamPoc IAM role"
 
 Resources:
-  HelloWorldFunction:
+  BestorHelloFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
-      Role: AwsSamPoc
+      Role:
+        Ref: AwsSamPoc
       PackageType: Image
       Architectures:
         - x86_64
@@ -36,10 +37,11 @@ Resources:
       DockerTag: go1.x-v1
       DockerContext: ./hello-world
       Dockerfile: Dockerfile
-  GoodbyeWorldFunction:
+  BestorGoodbyeFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
-      Role: AwsSamPoc
+      Role:
+        Ref: AwsSamPoc
       PackageType: Image
       Architectures:
         - x86_64
@@ -57,10 +59,11 @@ Resources:
       DockerContext: ./hello-world
       Dockerfile: Dockerfile
 
-  OrgQueryFunction:
+  BestorOrgQueryFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
-      Role: AwsSamPoc
+      Role:
+        Ref: AwsSamPoc
       PackageType: Image
       Architectures:
         - x86_64
